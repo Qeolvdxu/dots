@@ -1,0 +1,23 @@
+#User Inputed Flags
+CFLAGS="-march=znver1 -O2 -pipe"
+CXXFLAGS="${CFLAGS}"
+
+MAKEOPTS="-j9"
+
+INPUT_DEVICES="libinput"
+
+VIDEO_CARDS="radeon"
+
+# NOTE: This stage was built with the bindist Use flag enabled
+PORTDIR="/usr/portage"
+DISTDIR="/usr/portage/distfiles"
+PKGDIR="/usr/portage/packages"
+
+# This sets the language of build output to English.
+# Please keep this setting intact when reporting bugs.
+LC_MESSAGES=C
+
+#Created with mirrorselect
+GENTOO_MIRRORS="http://www.gtlib.gatech.edu/pub/gentoo"
+GRUB_PLATFORMS="efi-64"
+USE="abi_x86_32 alsa xinerama webchannel icu haptic"

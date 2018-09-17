@@ -1,0 +1,22 @@
+URxvt*font: xft:xos4 terminus: size=15 
+URxvt.background: #282828
+URxvt.foreground: #ebdbb2
+urxvt*color0:  #282828
+urxvt*color8:  #928374
+urxvt*color1:  #cc241d
+urxvt*color9:  #fb4934
+urxvt*color2:  #98971a
+urxvt*color10: #b8bb26
+urxvt*color3:  #d79921
+urxvt*color11: #fabd2f
+urxvt*color4:  #458588
+urxvt*color12: #83a598
+urxvt*color5:  #b16286
+urxvt*color13: #d3869b
+urxvt*color6:  #689d6a
+urxvt*color14: #8ec07c
+urxvt*color7:  #a89984
+urxvt*color15: #ebdbb2
+URxvt.letterSpace: 1
+URxvt.scrollBar: off
+
