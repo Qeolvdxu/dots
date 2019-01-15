@@ -1,3 +1,8 @@
+syntax on
+
+" Reads ~/.vim/colors/dracula.vim
+color dracula
+
 " Disable Nasty Arrow Keys
 noremap   <Up>     <NOP>
 inoremap  <Up>     <NOP>
