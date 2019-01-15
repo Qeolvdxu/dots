@@ -1,5 +1,5 @@
 #Startup
-exec polybar top
+exec ~/.lemonbar.sh | lemonbar -p 
 exec stterm -f "Liberation Mono:pixelsize=18:antialising=off"
 
 #Use superkey as Mod
