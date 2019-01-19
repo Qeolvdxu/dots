@@ -1,15 +1,15 @@
 #Startup
-exec ~/.lemonbar.sh | lemonbar -p 
+exec bash ~/.lemonbar.sh | lemonbar -p 
 exec stterm -f "Liberation Mono:pixelsize=18:antialising=off"
 
 #Use superkey as Mod
 set $mod Mod4
 
 for_window [class="^.*"] border pixel 2
-new_window 1pixel
-gaps inner 8 
-gaps outer 4
-smart_gaps on
+#new_window 1pixel
+#gaps inner 8 
+#gaps outer 4
+#smart_gaps on
 
 #Colors
 client.focused		#ffffff	#ffffff	#ffffff

@@ -10,9 +10,20 @@ battery()
 	cat /sys/class/power_supply/BAT1/capacity
 }
 
+memory()
+{
+	cat  /proc/meminfo | grep MemAvailable:
+	
+}
+
+name()
+{
+	hostname
+}
+
 while true 
 do
-	BAR_INPUT="%{l}echo 'schoopy scoopy poopy wooopy'  %{c} Thinkpad T480  %{r}POWER|$(battery)% TIME|$(clock)	"
+	BAR_INPUT="%{l} $(memory)  %{c} $(name) %{r}POWER|$(battery)% TIME|$(clock)	"
 	echo $BAR_INPUT
 	sleep 1
 done
