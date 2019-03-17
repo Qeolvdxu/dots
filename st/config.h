@@ -106,7 +106,7 @@ static const char *colorname[] = {
 	
 	/* special colors */
 	[256] = "#282a36", /* background */
-	[256] = "#f8f8f2", /* forground */
+	[257] = "#f8f8f2", /* forground */
 };
 
 
@@ -120,7 +120,7 @@ unsigned int defaultcs = 257;
 unsigned int defaultrcs = 257;
 
 unsigned int defaultitalic = 7;
-unsigned int default underline = 7;
+unsigned int defaultunderline = 7;
 
 /*
  * Default shape of cursor
@@ -179,8 +179,6 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
 
 /*
