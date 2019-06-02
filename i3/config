@@ -12,10 +12,10 @@ gaps outer 4
 smart_gaps on
 
 #Colors
-client.focused		#ffffff	#ffffff	#ffffff
-client.unfocused	#181B20	#181B20	#181B20
-client.focused_inactive	#181B20	#181B20	#181B20
-client.urgent		#ff0000	#ff0000	#ff0000
+client.focused		#f8f8f2	#f8f8f2	#f8f8f2
+client.unfocused	#44475a	#44475a	#44475a
+client.focused_inactive	#44475a	#44475a	#44475a
+client.urgent		#ff5555	#ff5555	#ff5555
 
 #Start a terminal
 bindsym $mod+Return exec st -f "Liberation Mono:pixelsize=18:antialising=off" 
