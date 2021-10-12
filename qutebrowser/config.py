@@ -1,3 +1,6 @@
+config.load_autoconfig(False)
+config.source('qutemacs/qutemacs.py')
+
 import dracula.draw
 
 dracula.draw.blood(c, {
