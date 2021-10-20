@@ -1,3 +1,15 @@
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(toggle-scroll-bar -1)
+(setq inhibit-startup-screen t)
+
+(define-globalized-minor-mode my-global-nyan-mode nyan-mode
+  (lambda () (nyan-mode 1)))
+(my-global-nyan-mode 1)
+
+(require 'evil)
+(evil-mode 1)
+
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
