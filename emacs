@@ -3,6 +3,8 @@
 (toggle-scroll-bar -1)
 (setq inhibit-startup-screen t)
 
+(add-hook 'after-init-hook 'global-company-mode)
+
 (define-globalized-minor-mode my-global-nyan-mode nyan-mode
   (lambda () (nyan-mode 1)))
 (my-global-nyan-mode 1)
