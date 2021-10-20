@@ -6,6 +6,7 @@
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 
+(require 'nyan-mode)
 (define-globalized-minor-mode my-global-nyan-mode nyan-mode
   (lambda () (nyan-mode 1)))
 (my-global-nyan-mode 1)
