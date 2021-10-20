@@ -18,9 +18,11 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
+(require 'treemacs)
+(global-set-key [f8] 'treemacs)
 
+;; C and C++ language server
+(require 'ccls)
 (use-package ccls
   :ensure t
   :config
@@ -30,10 +32,9 @@
   :hook ((c-mode c++-mode objc-mode) .
          (lambda () (require 'ccls) (lsp))))
 
+;; Java language server
 (require 'lsp-java)
 (add-hook 'java-mode-hook #'lsp)
-
-(setq neo-theme (if (display-graphic-p) 'icons 'ascii))
 
 (custom-set-variables '(package-selected-packages '(lsp-javacomp use-package neotree lsp-ui lsp-latex lsp-java ccls)))
 (custom-set-faces)
