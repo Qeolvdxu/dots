@@ -1,23 +1,29 @@
+;; remove bars and welcome screen
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (toggle-scroll-bar -1)
 (setq inhibit-startup-screen t)
 
+;; autocomplete ui
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
 
+;; nyan cat line bar
 (require 'nyan-mode)
 (define-globalized-minor-mode my-global-nyan-mode nyan-mode
   (lambda () (nyan-mode 1)))
 (my-global-nyan-mode 1)
 
+;; vim bindings for text editing
 (require 'evil)
 (evil-mode 1)
 
+;; melpa repo for packages
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
+;; tree gui (toggle with f8)
 (require 'treemacs)
 (global-set-key [f8] 'treemacs)
 
