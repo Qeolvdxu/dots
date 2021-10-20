@@ -41,3 +41,11 @@
 ;; Java language server
 (require 'lsp-java)
 (add-hook 'java-mode-hook #'lsp)
+
+;; GDScript language server
+(require 'gdscript-mode)
+(use-package gdscript-mode
+    :straight (gdscript-mode
+               :type git
+               :host github
+               :repo "godotengine/emacs-gdscript-mode"))
