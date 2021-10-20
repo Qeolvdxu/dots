@@ -41,6 +41,3 @@
 ;; Java language server
 (require 'lsp-java)
 (add-hook 'java-mode-hook #'lsp)
-
-(custom-set-variables '(package-selected-packages '(lsp-javacomp use-package neotree lsp-ui lsp-latex lsp-java ccls)))
-(custom-set-faces)
