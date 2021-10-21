@@ -4,6 +4,10 @@
 (toggle-scroll-bar -1)
 (setq inhibit-startup-screen t)
 
+;; Bind undo to Control Z
+(global-unset-key "\C-z")
+(global-set-key "\C-z" 'advertised-undo)
+
 ;; adds number lines
 (global-display-line-numbers-mode)
 
