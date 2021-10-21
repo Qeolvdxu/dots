@@ -2,7 +2,7 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (toggle-scroll-bar -1)
-(setq inhibit-startup-screen t)
+;;(setq inhibit-startup-screen t)
 
 ;; Bind undo to Control Z
 (global-unset-key "\C-z")
@@ -51,8 +51,4 @@
 
 ;; GDScript language server
 (require 'gdscript-mode)
-(use-package gdscript-mode
-    :straight (gdscript-mode
-               :type git
-               :host github
-               :repo "godotengine/emacs-gdscript-mode"))
+(use-package gdscript-mode)
