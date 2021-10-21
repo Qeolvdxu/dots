@@ -4,6 +4,9 @@
 (toggle-scroll-bar -1)
 (setq inhibit-startup-screen t)
 
+;; adds number lines
+(global-display-line-numbers-mode)
+
 ;; autocomplete ui
 (require 'company)
 (add-hook 'after-init-hook 'global-company-mode)
