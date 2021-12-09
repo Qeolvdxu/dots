@@ -4,6 +4,11 @@
 (toggle-scroll-bar -1)
 ;;(setq inhibit-startup-screen t)
 
+;; Display valid key combos in realtime
+(add-to-list 'load-path "path/to/which-key.el")
+(require 'which-key)
+(which-key-mode)
+
 ;; Bind undo to Control Z
 (global-unset-key "\C-z")
 (global-set-key "\C-z" 'advertised-undo)
