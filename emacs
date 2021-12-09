@@ -9,6 +9,13 @@
 (require 'which-key)
 (which-key-mode)
 
+;; Hide ^M DOS line endings
+(defun remove-dos-eol ()
+  (interactive)
+  (setq buffer-display-table (make-display-table))
+  (aset buffer-display-table ?\^M []))
+
+
 ;; Bind undo to Control Z
 (global-unset-key "\C-z")
 (global-set-key "\C-z" 'advertised-undo)
