@@ -1,3 +1,12 @@
+;; melpa repo for packages
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+(unless package-archive-contents
+  (package-refresh-contents))
+(require 'use-package)
+(setq use-package-always-ensure t)
+
 ;; remove bars and welcome screen
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -5,8 +14,7 @@
 ;;(setq inhibit-startup-screen t)
 
 ;; Display valid key combos in realtime
-(add-to-list 'load-path "path/to/which-key.el")
-(require 'which-key)
+(use-package which-key)
 (which-key-mode)
 
 ;; Hide ^M DOS line endings
@@ -15,6 +23,12 @@
   (setq buffer-display-table (make-display-table))
   (aset buffer-display-table ?\^M []))
 
+;; Colemak-dh vim bindings for evil
+(use-package evil-colemak-basics
+:init
+(setq evil-colemak-basics-layout-mod 'mod-dh)
+:config
+(global-evil-colemak-basics-mode))
 
 ;; Bind undo to Control Z
 (global-unset-key "\C-z")
@@ -24,30 +38,25 @@
 (global-display-line-numbers-mode)
 
 ;; autocomplete ui
-(require 'company)
+(use-package company)
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; nyan cat line bar
-(require 'nyan-mode)
+(use-package nyan-mode)
 (define-globalized-minor-mode my-global-nyan-mode nyan-mode
   (lambda () (nyan-mode 1)))
 (my-global-nyan-mode 1)
 
 ;; vim bindings for text editing
-(require 'evil)
+(use-package evil)
 (evil-mode 1)
 
-;; melpa repo for packages
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
-
 ;; tree gui (toggle with f8)
-(require 'treemacs)
+(use-package treemacs)
 (global-set-key [f8] 'treemacs)
 
 ;; C and C++ language server
-(require 'ccls)
+(use-package ccls)
 (use-package ccls
   :ensure t
   :config
@@ -58,9 +67,12 @@
          (lambda () (require 'ccls) (lsp))))
 
 ;; Java language server
-(require 'lsp-java)
+(use-package lsp-java)
 (add-hook 'java-mode-hook #'lsp)
 
 ;; GDScript language server
-(require 'gdscript-mode)
 (use-package gdscript-mode)
+
+;; use dracula color scheme
+(use-package dracula-theme)
+(load-theme 'dracula t)
