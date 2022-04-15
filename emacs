@@ -76,3 +76,11 @@
 ;; use dracula color scheme
 (use-package dracula-theme)
 (load-theme 'dracula t)
+
+;; Matlab integration
+(use-package matlab-mode
+  :ensure t
+  :defer t
+  :config (setq matlab-indent-function-body t)
+  :commands (matlab-shell)
+ )
