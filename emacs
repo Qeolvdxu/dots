@@ -75,6 +75,10 @@
 (use-package lsp-java)
 (add-hook 'java-mode-hook #'lsp)
 
+;; LaTeX preview and compiling
+(use-package latex-preview-pane-mode)
+(latex-preview-pane-enable)
+
 ;; GDScript language server
 (use-package gdscript-mode)
 
