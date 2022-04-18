@@ -86,6 +86,11 @@
 (use-package dracula-theme)
 (load-theme 'dracula t)
 
+;; Spell Checking
+(use-package flyspell-correct)
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+
 ;; Matlab integration
 (use-package matlab-mode
   :ensure t
