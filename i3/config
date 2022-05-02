@@ -1,6 +1,4 @@
 #Startup
-#exec bash ~/.lemonbar.sh | lemonbar -p 
-#exec stterm -f "Liberation Mono:pixelsize=18:antialising=off"
 
 #Use superkey as Mod
 set $mod Mod4
@@ -11,14 +9,15 @@ gaps inner 8
 gaps outer 4
 smart_gaps on
 
-#Colors
+# Dracula Colors
 client.focused		#f8f8f2	#f8f8f2	#f8f8f2
 client.unfocused	#44475a	#44475a	#44475a
 client.focused_inactive	#44475a	#44475a	#44475a
 client.urgent		#ff5555	#ff5555	#ff5555
 
 #Start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec foot
+bindsym $mod+Tab exec emacsclient --create-frame --alternate-editor=""
 
 #Kill focused window
 bindsym $mod+q kill
@@ -27,10 +26,10 @@ bindsym $mod+q kill
 bindsym $mod+space exec i3-dmenu-desktop 
 
 #Change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+m focus left
+bindsym $mod+n focus down
+bindsym $mod+e focus up
+bindsym $mod+i focus right
 
 #Move focused window
 
