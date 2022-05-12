@@ -28,12 +28,8 @@
   (setq buffer-display-table (make-display-table))
   (aset buffer-display-table ?\^M []))
 
-;; Colemak-dh vim bindings for evil
-(use-package evil-colemak-basics
-:init
-(setq evil-colemak-basics-layout-mod 'mod-dh)
-:config
-(global-evil-colemak-basics-mode))
+;; use custom eshell file instead of shell
+(setenv "ESHELL" (expand-file-name "/bin/eshell"))
 
 ;; Bind undo to Control Z
 (global-unset-key "\C-z")
