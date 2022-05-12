@@ -1,0 +1,2 @@
+#!/bin/bash
+TERM="eterm-color" exec zsh
