@@ -147,4 +147,6 @@
       "The current date."
       (format-time-string "%h %d"))
     (spaceline-toggle-time-on)
-    (spaceline-emacs-theme 'date 'time))
+    (spaceline-emacs-theme 'date 'time)
+  )
+)
