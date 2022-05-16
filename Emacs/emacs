@@ -15,10 +15,7 @@
 (use-package magit)
 
 ;; HELM
-(use-package helm
-:straight t
-:config
-[...])
+(use-package helm)
 
 ;;Keep packages up to date
 (use-package auto-package-update)
