@@ -18,6 +18,26 @@
 (toggle-scroll-bar -1)
 ;;(setq inhibit-startup-screen t)
 
+;; auto launch latex preview pane
+(use-package latex-preview-pane)
+(latex-preview-pane-enable)
+
+;; always use correct indentation
+(use-package aggressive-indent)
+(global-aggressive-indent-mode 1)
+
+;; better startup menu
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook))
+(setq dashboard-center-content t)
+(setq dashboard-startup-banner 'logo)
+
+;; hyperlinks in editor
+(use-package hyperbole)
+(hyperbole-mode 1)
+
 ;; Display valid key combos in realtime
 (use-package which-key)
 (which-key-mode)
