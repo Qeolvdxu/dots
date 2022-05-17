@@ -42,6 +42,7 @@
   (dashboard-setup-startup-hook))
 (setq dashboard-center-content t)
 (setq dashboard-startup-banner 'logo)
+(setq initial-buffer-choice (lambda () (get-buffer "*dashboard*")))
 
 ;; hyperlinks in editor
 (use-package hyperbole)
