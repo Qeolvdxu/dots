@@ -97,17 +97,6 @@
   :hook ((c-mode c++-mode objc-mode) .
          (lambda () (require 'ccls) (lsp))))
 
-;; Web related language servers
-(use-package web-mode)
-(use-package company-web)
-(add-to-list 'auto-mode-alist '("\\.ts\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
-(defun my-web-mode-hook ()
-  (set (make-local-variable 'company-backends) '(company-css company-web-html company-yasnippet company-files))
-)
-
 
 ;; Java language server
 (use-package lsp-java)
