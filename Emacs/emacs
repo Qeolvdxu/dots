@@ -165,6 +165,3 @@
         (cyan    "#8be9fd")
         (green   "#50fa7b"))
     (setq ansi-term-color-vector
-          (vconcat `(unspecified ,base02 ,red ,green ,yellow ,blue
-                                 ,magenta ,cyan ,base2)))))
-
