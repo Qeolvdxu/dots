@@ -59,7 +59,7 @@
   (aset buffer-display-table ?\^M []))
 
 ;; use custom eshell file instead of shell
-(setenv "ESHELL" (expand-file-name "~/.eshell"))
+;; DISABLED (setenv "ESHELL" (expand-file-name "~/.eshell"))
 
 ;; Bind undo to Control Z
 (global-unset-key "\C-z")
