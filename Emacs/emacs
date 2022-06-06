@@ -1,6 +1,5 @@
 ;; melpa repo for packages
 (require 'package)
-(require 'use-package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 (unless package-archive-contents
