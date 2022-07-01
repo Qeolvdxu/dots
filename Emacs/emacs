@@ -30,6 +30,25 @@
 (use-package latex-preview-pane)
 (latex-preview-pane-enable)
 
+;; better terminal
+(use-package vterm
+  :ensure t)
+(add-to-list 'tramp-remote-path 'tramp-own-remote-path)
+(add-hook 'vterm-mode-hook 'turn-off-evil-mode)
+
+;; Disable line numbers for some modes
+(dolist (mode '(org-mode-hook
+                term-mode-hook
+                shell-mode-hook
+                treemacs-mode-hook
+                eshell-mode-hook
+                vterm-mode-hook
+                telega-root-mode-hook
+                telega-chat-mode-hook
+                erc-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
+
+
 ;; always use correct indentation
 (use-package aggressive-indent)
 (global-aggressive-indent-mode 1)
@@ -127,3 +146,16 @@
 
 ;; No line numbs for eshell
 (add-hook 'eshell-mode-hook (lambda () (display-line-numbers-mode -1)))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(all-the-icons matlab-mode flyspell-correct dracula-theme gdscript-mode lsp-java ccls treemacs evil nyan-mode company which-key hyperbole dashboard aggressive-indent latex-preview-pane auto-package-update helm magit multiple-cursors use-package)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
