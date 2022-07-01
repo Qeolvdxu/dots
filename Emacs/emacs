@@ -35,6 +35,7 @@
   :ensure t)
 (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
 (add-hook 'vterm-mode-hook 'turn-off-evil-mode)
+(global-set-key (kbd "C-v") 'vterm-yank)
 
 ;; Disable line numbers for some modes
 (dolist (mode '(org-mode-hook
