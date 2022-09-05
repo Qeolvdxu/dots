@@ -7,6 +7,15 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
+;; visual autocompletion menu
+(use-package ivy)
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq ivy-count-format "(%d/%d) ")
+(use-package ivy-posframe)
+(setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display)))
+(ivy-posframe-mode 1)
+
 ;; multiple cursors!
 (use-package multiple-cursors)
 
