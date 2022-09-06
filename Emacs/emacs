@@ -21,7 +21,7 @@
 (global-flycheck-mode)
 (use-package flycheck-posframe)
 (add-hook 'flycheck-mode-hook #'flycheck-posframe-mode)
-(flycehck-posframe-configure-pretty-defualts)
+(flycheck-posframe-configure-pretty-defualts)
 
 
 ;; multiple cursors!
