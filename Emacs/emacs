@@ -155,16 +155,3 @@
 
 ;; No line numbs for eshell
 (add-hook 'eshell-mode-hook (lambda () (display-line-numbers-mode -1)))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(all-the-icons matlab-mode flyspell-correct dracula-theme gdscript-mode lsp-java ccls treemacs evil nyan-mode company which-key hyperbole dashboard aggressive-indent latex-preview-pane auto-package-update helm magit multiple-cursors use-package)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
