@@ -16,6 +16,13 @@
 (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display)))
 (ivy-posframe-mode 1)
 
+;; grammerly in text-mode
+(use-package lsp-grammarly
+  :ensure t
+  :hook (text-mode . (lambda ()
+                       (require 'lsp-grammarly)
+                       (lsp))))  ; or lsp-deferred
+
 ;; visual error checking
 (use-package flycheck)
 (global-flycheck-mode)
