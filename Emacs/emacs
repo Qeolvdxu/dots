@@ -25,6 +25,9 @@
   :config (add-hook 'flycheck-mode-hook #'flycheck-posframe-mode))
  (flycheck-posframe-configure-pretty-defaults)
 
+;; custom theme 
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
+(load-theme 'quixotic t)
 
 ;; multiple cursors!
 (use-package multiple-cursors)
@@ -133,10 +136,6 @@
 
 ;; GDScript language server
 (use-package gdscript-mode)
-
-;; use dracula color scheme
-(use-package dracula-theme)
-(load-theme 'dracula t)
 
 ;; Spell Checking
 (use-package flyspell-correct)
