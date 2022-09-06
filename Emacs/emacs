@@ -19,9 +19,11 @@
 ;; visual error checking
 (use-package flycheck)
 (global-flycheck-mode)
-(use-package flycheck-posframe)
-(add-hook 'flycheck-mode-hook #'flycheck-posframe-mode)
-(flycheck-posframe-configure-pretty-defualts)
+(use-package flycheck-posframe
+  :ensure t
+  :after flycheck
+  :config (add-hook 'flycheck-mode-hook #'flycheck-posframe-mode))
+ (flycheck-posframe-configure-pretty-defaults)
 
 
 ;; multiple cursors!
