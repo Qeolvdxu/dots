@@ -7,14 +7,30 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :family "kakwafont")))))
+
 ;; visual autocompletion menu
 (use-package ivy)
+(use-package lsp-ivy)
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq ivy-count-format "(%d/%d) ")
 (use-package ivy-posframe)
 (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display)))
 (ivy-posframe-mode 1)
+
+(setq evil-search-module 'evil-search)
+(windmove-default-keybindings)
+
+;; better scrolling
+(require 'smooth-scrolling)
+(smooth-scrolling-mode 1)
+(setq smooth-scroll-margin 5)
 
 ;; grammerly in text-mode
 (use-package lsp-grammarly
@@ -100,6 +116,20 @@
 (use-package which-key)
 (which-key-mode)
 
+(use-package lsp-mode
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  :hook ( (prog-mode . lsp)
+	  (lsp-mode . lsp-enable-which-key-integration))
+  :commands lsp)
+
+;; The path to lsp-mode needs to be added to load-path as well as the
+;; path to the `clients' subdirectory.
+(add-to-list 'load-path (expand-file-name "lib/lsp-mode" user-emacs-directory))
+(add-to-list 'load-path (expand-file-name "lib/lsp-mode/clients" user-emacs-directory))
+
+(use-package lsp-ui)
+
 ;; Hide ^M DOS line endings
 (defun remove-dos-eol ()
   (interactive)
@@ -161,5 +191,15 @@
 (use-package all-the-icons
   :if (display-graphic-p))
 
+(global-unset-key [f12])
+
 ;; No line numbs for eshell
 (add-hook 'eshell-mode-hook (lambda () (display-line-numbers-mode -1)))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(flymake-lua lua-mode power-mode treemacs-projectile which-key wakatime-mode vterm use-package smooth-scrolling prism nyan-mode multiple-cursors matlab-mode magit lsp-java lsp-grammarly latex-preview-pane ivy-posframe hyperbole helm gdscript-mode flyspell-correct flycheck-posframe evil dracula-theme doom dashboard cuda-mode company-auctex cmake-mode ccls auto-package-update all-the-icons aggressive-indent)))
+
