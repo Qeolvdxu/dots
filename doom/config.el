@@ -34,7 +34,7 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-one)
 (global-wakatime-mode)
-(customize-set-variable 'wakatime-api-key "waka_0eda8278-cb44-457d-9b8c-a79e410fb64f")
+(customize-set-variable 'wakatime-api-key "waka_key")
 (require `vlf-setup)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
