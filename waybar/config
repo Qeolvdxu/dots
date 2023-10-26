@@ -1,0 +1,93 @@
+{
+	"layer": "top",
+	"position": "top",
+	"modules-left": [
+		"sway/mode",
+		"sway/workspaces"
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"network",
+		"wireplumber",
+		"battery",
+		"sway/language"
+	],
+	"height": 25,
+	"margin-top": 6,
+	"margin-left": 6,
+	"margin-right": 6,
+	"margin-bottom": 0,
+	"spacing": 2,
+	"sway/window": {
+		"max-length": 50
+	},
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"disable-markup": false,
+		"format": "{icon}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"6": "6",
+			"7": "7",
+			"8": "8",
+			"9": "9",
+			"10": "10"
+		},
+		"persistent_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+		}
+	},
+	"sway/mode": {
+		"format": "{}"
+	},
+	"network": {
+		"format-wifi": " {signalStrength:3}%",
+		"format-ethernet": "{ifname}: {ipaddr}/{cidr}",
+		"format-linked": "{ifname} (No IP)",
+		"format-disconnected": "󰤯  {signalStrength:3}%",
+		"format-alt": "{ifname}: {ipaddr}/{cidr}"
+	},
+	"wireplumber": {
+		"format": " {volume:3}%",
+		"format-muted": "󰖁 {volume:3}%",
+		"on-click": "helvum",
+	},
+	"battery": {
+		"bat": "BAT0",
+		"adapter": "ADP1",
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}  {capacity:3}%",
+		"format-charging": " {capacity:3}%",
+		"format-plugged": "  {capacity:3}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"interval": 10
+	},
+	"clock": {
+		"format": " {:%H:%M}",
+		"format-alt": " {:%Y-%m-%d %H:%M}",
+		"interval": 60
+	},
+	"sway/language": {
+		"format": "  {short}",
+	}
+}
