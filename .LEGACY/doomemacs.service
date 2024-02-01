@@ -1,0 +1,13 @@
+[Unit]
+Description=DOOM Emacs text editor
+Documentation=info:emacs man:emacs(1) https://gnu.org/software/emacs/
+
+[Service]
+User=hayden
+Type=forking
+ExecStart=/home/hayden/.config/emacs/bin/doom run --daemon
+ExecStop=/usr/bin/emacsclient --eval "(kill-emacs)"
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

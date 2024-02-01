@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Doom Emacs
-Exec=/home/hayden/.config/emacs/bin/doom run
+Exec=/usr/bin/emacsclient -a '' -c
 Type=Application
 Icon=
 Categories=Development;

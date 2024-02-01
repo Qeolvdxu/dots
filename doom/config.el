@@ -33,9 +33,28 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-one)
+(vertico-posframe-mode 1)
+
 (global-wakatime-mode)
-(customize-set-variable 'wakatime-api-key "waka_key")
-(require `vlf-setup)
+(customize-set-variable 'wakatime-api-key "waka_2b58891e-310e-4661-8c75-f28665fae208")
+(require 'vlf-setup)
+
+(hyperbole-mode)
+(spacious-padding-mode)
+
+(use-package! lsp-grammarly
+  :hook (latex-mode . (lambda ()
+                        (require 'lsp-grammarly)
+                        (lsp))))
+
+(use-package! golden-ratio
+  :after-call pre-command-hook
+  :config
+  (golden-ratio-mode +1)
+  ;; Using this hook for resizing windows is less precise than
+  ;; `doom-switch-window-hook'.
+  (remove-hook 'window-configuration-change-hook #'golden-ratio)
+  (add-hook 'doom-switch-window-hook #'golden-ratio))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
