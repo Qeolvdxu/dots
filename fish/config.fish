@@ -4,10 +4,6 @@ set -U fish_greeting ""
 
 # powerline splash
 set fish_function_path $fish_function_path "/usr/share/powerline/bindings/fish"
-source /usr/share/powerline/bindings/fish/powerline-setup.fish
-powerline-setup
-
-fish_add_path ~/.config/emacs/bin
 
 # !! binding
 function last_history_item
@@ -20,3 +16,8 @@ fish_vi_key_bindings
 
 # splash screen art
 cat ~/.config/fish/splash
+
+export PATH="/home/hayden/.bin:/home/hayden/.config/emacs/bin:$PATH"
+
+alias ls="exa --icons --git"
+alias cat="bat"
